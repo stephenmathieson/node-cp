@@ -17,7 +17,6 @@ function cleanup() {
   }
 }
 
-
 describe('cp', function () {
 
   beforeEach(cleanup);

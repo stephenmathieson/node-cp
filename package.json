@@ -2,19 +2,32 @@
   "name": "cp",
   "version": "0.1.0",
   "description": "cp for node",
-  "keywords": [],
+  "keywords": [
+    "fs",
+    "copy",
+    "cp"
+  ],
   "author": "Stephen Mathieson <me@stephenmathieson.com>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/stephenmathieson/cp.git"
+    "url": "git://github.com/stephenmathieson/node-cp.git"
   },
   "dependencies": {},
   "devDependencies": {
     "mocha": "~1.11.0",
     "should": "~1.2.2",
     "glob": "~3.2.1",
-    "garbage": "0.0.0"
+    "jshint": "~2.1.4"
   },
   "main": "index",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stephenmathieson/node-cp/issues"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  }
 }

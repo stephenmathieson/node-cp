@@ -1,0 +1,19 @@
+{
+  "name": "cp",
+  "version": "0.0.1",
+  "description": "cp for node",
+  "keywords": [],
+  "author": "Stephen Mathieson <me@stephenmathieson.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stephenmathieson/cp.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "~1.11.0",
+    "should": "~1.2.2",
+    "glob": "~3.2.1",
+    "garbage": "0.0.0"
+  },
+  "main": "index"
+}

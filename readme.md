@@ -1,9 +1,19 @@
 
 # cp
 
-  cp for node
+`cp` for node
 
 Really simple, straight-forward copying of files.
+
+## API
+
+### `cp(src, dest, cb)`
+
+Copy file `src` to `dest`
+
+### `cp.sync(src, dest)`
+
+Synchronously copy file `src` to `dest`
 
 ## License 
 

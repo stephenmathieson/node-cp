@@ -1,4 +1,4 @@
-# 0.1.1 (unreleased)
+# 0.1.1
 
 - added test-coverage reporting
 - explicitly destroying streams to prevent erroneously leaving one open on error

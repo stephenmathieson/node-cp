@@ -1,22 +1,28 @@
-validate: lint test
 
-lint:
-	@./node_modules/.bin/jshint \
-		--verbose \
-		index.js \
-		lib/*.js
+BIN := node_modules/.bin
+NODE ?= node
+SRC = $(wildcard *.js)
+TEST = $(wildcard test/*.js)
 
-test:
-	@./node_modules/.bin/mocha \
-		--require should \
-		--reporter spec
+test: NODE=$(BIN)/gnode
+test: node_modules
+	$(NODE) $(BIN)/_mocha \
+	  --reporter spec \
+	  --require co-mocha \
+	  $(NODE_FLAGS)
 
-test-cov: lib-cov
-	@CP_COV=1 ./node_modules/.bin/mocha \
-		--require should \
-		--reporter html-cov > coverage.html
+# coverage only available on 0.11
+coverage: node_modules $(SRC) $(TEST)
+	$(NODE) --harmony-generators $(BIN)/istanbul cover \
+	  $(BIN)/_mocha -- \
+	    --require co-mocha \
+	    --reporter spec
 
-lib-cov:
-	@jscoverage lib lib-cov
+node_modules: package.json
+	@npm install
+	@touch $@
 
-.PHONY: test lint test-cov validate
+clean:
+	@rm -rf coverage test/fixtures/*copy*
+
+.PHONY: test clean

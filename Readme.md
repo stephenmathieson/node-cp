@@ -7,7 +7,7 @@ Really simple, straight-forward copying of files.
 
 ## API
 
-### `cp(src, dest, cb)`
+### `cp(src, dest, cb)` / `yield cp(src, dest)`
 
 Copy file `src` to `dest`
 

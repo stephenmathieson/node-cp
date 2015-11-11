@@ -15,8 +15,6 @@
   "devDependencies": {
     "co-mocha": "^1.0.3",
     "glob": "~3.2.1",
-    "gnode": "^0.1.0",
-    "istanbul": "git://github.com/gotwarlost/istanbul#c6f8fc8b102cfa4e4455d6a165485b38cb58160c",
     "mocha": "^2.0.1"
   },
   "main": "index",
